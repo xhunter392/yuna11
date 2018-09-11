@@ -8,7 +8,7 @@ bot.on('ready', function() {
 	}
 );
 
-bot.login(process.env.TOKEN);
+bot.login("NDgxNzcyMjI4MjEyNDI0NzE3.Dl7NRA.q0qXjKSpAN0jPyhdEqvQh1klGW0");
 
 bot.on('message', message => {
 	if (message.content === prefix + "help"){
@@ -32,10 +32,10 @@ bot.on('message', message => {
 		message.reply("merci toi aussi");
 	}
 	if (message.content === "je vais dormir"){
-		message.reply("ok,bonne nuit ^^");
+		message.reply("ok, dors bien ^^");
 	}
 	if (message.content === "je vais me coucher"){
-		message.reply("ok,bonne nuit ^^");
+		message.reply("ok, dors bien ^^");
 	}
 	if (message.content === "quel est mon futur ?"){
 		message.reply("tu vas mourir héhé");
