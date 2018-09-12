@@ -1,9 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 var prefix = ("!");
-var heure = new Hour();
-var humeur = ("bonne");
-var humeurRep = ("bien");
 
 bot.on('ready', function() {
 		 bot.user.setGame("Commandes: !help");
