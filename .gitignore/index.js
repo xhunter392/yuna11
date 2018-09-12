@@ -35,7 +35,7 @@ bot.on('message', message => {
 	if (message.content === "bonne nuit Yuna" || message.content === "bonne nuit yuna" || message.content === "dors bien yuna" || message.content === "dors bien Yuna"){
 		message.reply("merci toi aussi");
 	}
-	if (message.content === "je vais dormir"||"je vais me coucher"){
+	if (message.content === "je vais dormir" || message.content === "je vais me coucher"){
 		message.reply("ok, dors bien");
 	}
 	if (message.content === "quel est mon futur ?"){
