@@ -27,6 +27,9 @@ bot.on('message', message => {
 		message.reply("salut à toi. ^^");
 		console.log("commande salut Yuna effectué");
 	}
+	if (message.content === "quelle heure est-il ?"|| "quelle heure est il ?" || "Quelle heure est-il ?" || "Quelle heure est il ?"){
+		message.reply("il est " + heure);
+	}
 
 	//humeur
 
