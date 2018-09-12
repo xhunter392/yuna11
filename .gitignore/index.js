@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 var prefix = ("!");
 
+
 bot.on('ready', function() {
 		 bot.user.setGame("Commandes: !help");
 		 console.log("connected");
@@ -20,18 +21,18 @@ bot.on('message', message => {
 			.setFooter("La suite à venir, un peu de patience :wink:")
 		message.channel.sendMessage(embed);
 	}
-	if (message.content === "salut Yuna" || "bonjour Yuna" === "salut yuna" || "bonjour yuna"){ 
+	if (message.content === "salut Yuna" || message.content === "bonjour Yuna" || message.content === "salut yuna" || message.content === "bonjour yuna"){ 
 		message.reply("salut à toi. ^^");
 		console.log("commande salut Yuna effectué");
 	}
-	if (message.content === "quelle heure est-il ?" || "quelle heure est il ?" === "Quelle heure est-il ?" || "Quelle heure est il ?"){
+	if (message.content === "quelle heure est-il ?" || message.content === "quelle heure est il ?" || message.content === "Quelle heure est-il ?" || message.content === "Quelle heure est il ?"){
 		message.reply("il est " + heure);
 	}
 	if (message.content === "je vais manger"){
 		message.reply("Bon appétit :smiley: ");
 		console.log("commande bon appétit effectué");
 	}
-	if (message.content === "bonne nuit Yuna"||"bonne nuit yuna"||"dors bien yuna"||"dors bien Yuna"){
+	if (message.content === "bonne nuit Yuna" || message.content === "bonne nuit yuna" || message.content === "dors bien yuna" || message.content === "dors bien Yuna"){
 		message.reply("merci toi aussi");
 	}
 	if (message.content === "je vais dormir"||"je vais me coucher"){
@@ -45,7 +46,7 @@ bot.on('message', message => {
 	}
 	
 	//tu fais quoi
-	if (message.content ==="tu fais quoi Yuna ?"||"tu fais quoi yuna ?"||"tu fais quoi Yuna?"||"tu fais quoi yuna?"){
+	if (message.content ==="tu fais quoi Yuna ?" || message.content === "tu fais quoi yuna ?" || message.content === "tu fais quoi Yuna?" || message.content === "tu fais quoi yuna?"){
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length)-1]);
 	}
 
