@@ -21,7 +21,7 @@ bot.on('message', message => {
 			.setFooter("La suite à venir, un peu de patience :wink:")
 		message.channel.sendMessage(embed);
 	}
-	if (message.content === "salut Yuna" || message.content === "bonjour Yuna" || message.content === "salut yuna" || message.content === "bonjour yuna"){ 
+	if (message.content === "salut Yuna" || message.content === "bonjour Yuna" || message.content === "salut yuna" || message.content === "bonjour yuna" || message.content === "Salut yuna" || message.content === "Salut Yuna" || message.content === "Bonjour Yuna" || message.content === "Bonjour yuna"){ 
 		message.reply("salut à toi. ^^");
 		console.log("commande salut Yuna effectué");
 	}
