@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 var prefix = ("!");
+var heure = new Hour();
+var humeur = ("bonne");
+var humeurRep = ("bien");
 
 bot.on('ready', function() {
 		 bot.user.setGame("Commandes: !help");
@@ -20,21 +23,38 @@ bot.on('message', message => {
 			.setFooter("La suite à venir, un peu de patience :wink:")
 		message.channel.sendMessage(embed);
 	}
-	if (message.content === "salut Yuna" || "bonjour Yuna" || "salut yuna" || "bonjour yuna"){ 
+	if (message.content === "salut Yuna" || "bonjour Yuna" === "salut yuna" || "bonjour yuna"){ 
 		message.reply("salut à toi. ^^");
 		console.log("commande salut Yuna effectué");
 	}
-	if (message.content === "quelle heure est-il ?" || "quelle heure est il ?" || "Quelle heure est-il ?" || "Quelle heure est il ?"){
+	if (message.content === "quelle heure est-il ?" || "quelle heure est il ?" === "Quelle heure est-il ?" || "Quelle heure est il ?"){
 		message.reply("il est " + heure);
 	}
+
+	//humeur
+
+	if ((heure > 0) && (heure < 7) || (heure > 22)){
+		var humeur = ("fatigué")
+	}
+	else {
+		var humeur = ("bonne")
+	}
+
+	if (message.content === "ça va Yuna ?" || "ça va yuna ?" || "comment vas tu Yuna ?" === "comment vas tu yuna ?" || "comment vas-tu Yuna" === "comment vas-tu yuna"){
+		message.reply(humeurRep);
+	}
+
+	
+
+
 	if (message.content === "je vais manger"){
 		message.reply("Bon appétit :smiley: ");
 		console.log("commande bon appétit effectué");
 	}
-	if (message.content === "bonne nuit Yuna" || "bonne nuit yuna" || "dors bien yuna" || "dors bien Yuna"){
+	if (message.content === "bonne nuit Yuna"||"bonne nuit yuna"||"dors bien yuna"||"dors bien Yuna"){
 		message.reply("merci toi aussi");
 	}
-	if (message.content === "je vais dormir" || "je vais me coucher"){
+	if (message.content === "je vais dormir"||"je vais me coucher"){
 		message.reply("ok, dors bien");
 	}
 	if (message.content === "quel est mon futur ?"){
