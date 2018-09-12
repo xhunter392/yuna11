@@ -1,9 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 var prefix = ("!");
-var heure = new Hour();
-var humeur = ("bonne");
-var humeurRep = ("bien");
 
 bot.on('ready', function() {
 		 bot.user.setGame("Commandes: !help");
@@ -30,23 +27,6 @@ bot.on('message', message => {
 	if (message.content === "quelle heure est-il ?" || "quelle heure est il ?" === "Quelle heure est-il ?" || "Quelle heure est il ?"){
 		message.reply("il est " + heure);
 	}
-
-	//humeur
-
-	if ((heure > 0) && (heure < 7) || (heure > 22)){
-		var humeur = ("fatigué")
-	}
-	else {
-		var humeur = ("bonne")
-	}
-
-	if (message.content === "ça va Yuna ?" || "ça va yuna ?" || "comment vas tu Yuna ?" === "comment vas tu yuna ?" || "comment vas-tu Yuna" === "comment vas-tu yuna"){
-		message.reply(humeurRep);
-	}
-
-	
-
-
 	if (message.content === "je vais manger"){
 		message.reply("Bon appétit :smiley: ");
 		console.log("commande bon appétit effectué");
