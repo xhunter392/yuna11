@@ -20,32 +20,32 @@ bot.on('message', message => {
 			.setFooter("La suite à venir, un peu de patience :wink:")
 		message.channel.sendMessage(embed);
 	}
-	if (message.content.toLowerCase === "salut yuna" || message.content.toLowerCase === "bonjour yuna"){
+	if (message.content.toLowerCase() === "salut yuna" || message.content.toLowerCase() === "bonjour yuna"){
 		message.reply("salut à toi. ^^");
 		console.log("commande salut Yuna effectué");
 	}
-	if (message.content.toLowerCase === "quelle heure est-il ?" || message.content.toLowerCase === "quelle heure est il ?"){
+	if (message.content.toLowerCase() === "quelle heure est-il ?" || message.content.toLowerCase() === "quelle heure est il ?"){
 		message.reply("il est " + heure);
 	}
-	if (message.content.toLowerCase === "je vais manger"){
+	if (message.content.toLowerCase() === "je vais manger"){
 		message.reply("Bon appétit :smiley: ");
 		console.log("commande bon appétit effectué");
 	}
-	if (message.content.toLowerCase === "bonne nuit yuna" || message.content.toLowerCase === "dors bien yuna"){
+	if (message.content.toLowerCase() === "bonne nuit yuna" || message.content.toLowerCase() === "dors bien yuna"){
 		message.reply("merci toi aussi");
 	}
-	if (message.content.toLowerCase === "je vais dormir" || message.content.toLowerCase === "je vais me coucher"){
+	if (message.content.toLowerCase() === "je vais dormir" || message.content.toLowerCase() === "je vais me coucher"){
 		message.reply("ok, dors bien");
 	}
-	if (message.content.toLowerCase === "quel est mon futur ?"){
+	if (message.content.toLowerCase() === "quel est mon futur ?"){
 		message.reply("tu vas mourir héhé");
 	}
-	if (message.content.toLowerCase === "quel est ton futur ?"){
+	if (message.content.toLowerCase() === "quel est ton futur ?"){
 		message.reply("je vais épouser Méliodas :hearts::hearts:");
 	}
 	
 	//tu fais quoi
-	if (message.content.toLowerCase === "tu fais quoi yuna ?" || message.content.toLowerCase === "tu fais quoi Yuna?"){
+	if (message.content.toLowerCase() === "tu fais quoi yuna ?" || message.content.toLowerCase() === "tu fais quoi Yuna?"){
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length)-1]);
 	}
 
