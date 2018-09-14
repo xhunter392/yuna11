@@ -4,7 +4,7 @@ var prefix = ("!");
 
 bot.on('ready', function() {
 		 bot.user.setGame("Commandes: !help");
-		 console.log("connected");
+         console.log("connected");
 	}
 );
 
@@ -43,7 +43,13 @@ bot.on('message', message => {
 	if (message.content.toLowerCase() === "quel est ton futur ?"){
 		message.reply("je vais épouser Méliodas :hearts::hearts:");
 	}
-	
+    
+    //heure 
+
+    if (message.content.toLowerCase() === "quelle heure est-il ?" || message.content.toLowerCase() === "quelle heure est il ?"){
+        message.reply("il est " + d)
+    }
+
 	//tu fais quoi
 	if (message.content.toLowerCase() === "tu fais quoi yuna ?" || message.content.toLowerCase() === "tu fais quoi Yuna?"){
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length)-1]);
@@ -75,6 +81,11 @@ bot.on('message', message => {
 
 function randomInt(max) {
 	return Math.floor(Math.random() * (Math.floor(max)) + 1);
+}
+
+function heure() {
+    d = new Date(); 
+    document.write(d.toLocaleDateString()+'  '+d.toLocaleTimeString()+'.'); 
 }
 
 var randomRepYuna = [
