@@ -46,11 +46,22 @@ bot.on('message', message => {
 	if (message.content.toLowerCase() === "ça va yuna ?" || message.content.toLowerCase() === "comment vas tu yuna ?") {
 		message.reply(randomHumeurYuna[randomInt(randomHumeurYuna.length) - 1] + " et toi ?");
 	}
-	
-	//tu fais quoi
-
 	if (message.content.toLowerCase() === "tu fais quoi yuna ?") {
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
+	}
+	
+	// 1er dialogue
+	
+	if (message.content === "salut yuna"){
+		message.reply("salut ^^")
+		sleep(20)
+		if (message.content === "ça va ?"){
+			message.channel.sendMessage("et toi ?")
+			sleep(20)
+			if (message.content === "super" || message.content === "bof" || message.content === "bien" || message.content === "oui"){
+				message.channel.sendMessage("c'est super alors :smiley:")
+			}
+		}
 	}
 	
 	// fonction dé
@@ -95,3 +106,7 @@ var randomHumeurYuna = [
 	"bof bof"
 ]
 
+function sleep(seconds){
+    var waitUntil = new Date().getTime() + seconds*1000;
+    while(new Date().getTime() < waitUntil) true;
+}
