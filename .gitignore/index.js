@@ -44,7 +44,7 @@ bot.on('message', message => {
 		message.reply("je vais épouser Méliodas :hearts::hearts:");
 	}
 	if (message.content.toLowerCase() === "ça va yuna ?" || message.content.toLowerCase() === "comment vas tu Yuna ?") {
-		message.reply(randomHumeurYuna[randomInt(randomHumeurYuna) - 1] + "et toi ?");
+		message.reply(randomHumeurYuna[randomInt(randomHumeurYuna.length) - 1] + "et toi ?");
 	}
 	
 	//tu fais quoi
@@ -52,7 +52,9 @@ bot.on('message', message => {
 	if (message.content.toLowerCase() === "tu fais quoi yuna ?" || message.content.toLowerCase() === "tu fais quoi Yuna?") {
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
 	}
-
+	if (message.content === "suce ma bite"){
+		message.reply("oh oui !!!");
+	}
 	// fonction dé
 
 	if (message.content === prefix + "1d6") {
