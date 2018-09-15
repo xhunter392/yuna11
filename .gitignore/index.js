@@ -20,10 +20,7 @@ bot.on('message', message => {
 			.setFooter("La suite à venir, un peu de patience :wink:")
 		message.channel.sendMessage(embed);
 	}
-	if (message.content.toLowerCase() === "salut yuna" || message.content.toLowerCase() === "bonjour yuna") {
-		message.reply("salut à toi. ^^");
-		console.log("commande salut Yuna effectué");
-	}
+	
 	if (message.content.toLowerCase() === "quelle heure est-il ?" || message.content.toLowerCase() === "quelle heure est il ?") {
 		message.reply("il est " + heure);
 	}
