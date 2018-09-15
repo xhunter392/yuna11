@@ -20,7 +20,10 @@ bot.on('message', message => {
 			.setFooter("La suite à venir, un peu de patience :wink:")
 		message.channel.sendMessage(embed);
 	}
-	
+	if (message.content.toLowerCase() === "salut yuna" || message.content.toLowerCase() === "bonjour yuna") {
+		message.reply("salut à toi. ^^");
+		console.log("commande salut Yuna effectué");
+	}
 	if (message.content.toLowerCase() === "quelle heure est-il ?" || message.content.toLowerCase() === "quelle heure est il ?") {
 		message.reply("il est " + heure);
 	}
@@ -45,20 +48,6 @@ bot.on('message', message => {
 	}
 	if (message.content.toLowerCase() === "tu fais quoi yuna ?") {
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
-	}
-	
-	// 1er dialogue
-	
-	if (message.content === "salut yuna"){
-		message.reply("salut ^^");
-		sleep(5);
-		if (message.content === "ça va ?"){
-			message.channel.sendMessage("oui et toi ?");
-			sleep(5);
-			if (message.content === "super" || message.content === "bof" || message.content === "bien" || message.content === "oui"){
-				message.channel.sendMessage("c'est super alors :smiley:");
-			}
-		}
 	}
 	
 	// fonction dé
@@ -98,7 +87,7 @@ var randomRepYuna = [
 ];
 
 var randomHumeurYuna = [
-	"Je suis un fatigué",
+	"Je suis un peu fatiguée",
 	"ça va super !!!",
 	"bof bof"
 ]
