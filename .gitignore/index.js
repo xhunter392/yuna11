@@ -47,13 +47,23 @@ bot.on('message', message => {
 		message.reply(randomHumeurYuna[randomInt(randomHumeurYuna.length) - 1] + " et toi ?");
 	}
 	
+	if (message.content.startsWith().toLowerCase("je t'aime yuna")){
+		if (message.author.id == "320256499404374017"){
+			message.reply("moi aussi , je n'aime que toi :hearts:");
+		}
+	}
 	//tu fais quoi
 
 	if (message.content.toLowerCase() === "tu fais quoi yuna ?") {
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
 	}
 	if (message.content === "suce ma bite"){
-		message.reply("oh oui");
+		if (message.author.id == "320256499404374017"){
+			message.channel.sendMessage("oh oui mon amour :heart_eyes:");
+		}
+		else {
+			message.reply("Non, toi je t'aime pas")
+		}
 	}
 	// fonction dé
 
