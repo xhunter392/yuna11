@@ -2,73 +2,76 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 var prefix = ("!");
 
-bot.on('ready', function() {
-		 bot.user.setGame("Commandes: !help");
-         console.log("connected");
-	}
+bot.on('ready', function () {
+	bot.user.setGame("Commandes: !help");
+	console.log("connected");
+}
 );
 
 bot.login("NDgxNzcyMjI4MjEyNDI0NzE3.Dl7NRA.q0qXjKSpAN0jPyhdEqvQh1klGW0");
 
 bot.on('message', message => {
-	if (message.content === prefix + "help"){
+	if (message.content === prefix + "help") {
 		var embed = new Discord.RichEmbed()
 			.setTitle("!help")
 			.setDescription("Liste des commandes")
-			.addField("!1dx(6,20,40,50 ou 100)","Permet de lancer un dé de la valeur indiqué entre parenthèse", true)
+			.addField("!1dx(6,20,40,50 ou 100)", "Permet de lancer un dé de la valeur indiqué entre parenthèse", true)
 			.setColor(0x8000FF)
 			.setFooter("La suite à venir, un peu de patience :wink:")
 		message.channel.sendMessage(embed);
 	}
-	if (message.content.toLowerCase() === "salut yuna" || message.content.toLowerCase() === "bonjour yuna"){
+	if (message.content.toLowerCase() === "salut yuna" || message.content.toLowerCase() === "bonjour yuna") {
 		message.reply("salut à toi. ^^");
 		console.log("commande salut Yuna effectué");
 	}
-	if (message.content.toLowerCase() === "quelle heure est-il ?" || message.content.toLowerCase() === "quelle heure est il ?"){
+	if (message.content.toLowerCase() === "quelle heure est-il ?" || message.content.toLowerCase() === "quelle heure est il ?") {
 		message.reply("il est " + heure);
 	}
-	if (message.content.toLowerCase() === "je vais manger"){
+	if (message.content.toLowerCase() === "je vais manger") {
 		message.reply("Bon appétit :smiley: ");
 		console.log("commande bon appétit effectué");
 	}
-	if (message.content.toLowerCase() === "bonne nuit yuna" || message.content.toLowerCase() === "dors bien yuna"){
+	if (message.content.toLowerCase() === "bonne nuit yuna" || message.content.toLowerCase() === "dors bien yuna") {
 		message.reply("merci toi aussi");
 	}
-	if (message.content.toLowerCase() === "je vais dormir" || message.content.toLowerCase() === "je vais me coucher"){
+	if (message.content.toLowerCase() === "je vais dormir" || message.content.toLowerCase() === "je vais me coucher") {
 		message.reply("ok, dors bien");
 	}
-	if (message.content.toLowerCase() === "quel est mon futur ?"){
+	if (message.content.toLowerCase() === "quel est mon futur ?") {
 		message.reply("tu vas mourir héhé");
 	}
-	if (message.content.toLowerCase() === "quel est ton futur ?"){
+	if (message.content.toLowerCase() === "quel est ton futur ?") {
 		message.reply("je vais épouser Méliodas :hearts::hearts:");
+	}
+	if (message.content.toLowerCase() === "ça va yuna ?" || message.content.toLowerCase() === "comment vas tu Yuna ?") {
+		message.reply(randomHumeurYuna[randomInt(randomHumeurYuna) - 1] + "et toi ?");
 	}
 	
 	//tu fais quoi
-	
-	if (message.content.toLowerCase() === "tu fais quoi yuna ?" || message.content.toLowerCase() === "tu fais quoi Yuna?"){
-		message.reply(randomRepYuna[randomInt(randomRepYuna.length)-1]);
+
+	if (message.content.toLowerCase() === "tu fais quoi yuna ?" || message.content.toLowerCase() === "tu fais quoi Yuna?") {
+		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
 	}
 
 	// fonction dé
 
-	if (message.content === prefix + "1d6"){
+	if (message.content === prefix + "1d6") {
 		message.reply("tu as fait un : " + randomInt(6));
 	}
 
-	if (message.content === prefix + "1d20"){
+	if (message.content === prefix + "1d20") {
 		message.reply("tu as fait un : " + randomInt(20));
 	}
 
-	if (message.content === prefix + "1d40"){
+	if (message.content === prefix + "1d40") {
 		message.reply("tu as fait un : " + randomInt(40));
 	}
 
-	if (message.content === prefix + "1d50"){
+	if (message.content === prefix + "1d50") {
 		message.reply("tu as fait un : " + randomInt(50));
 	}
 
-	if (message.content === prefix + "1d100"){
+	if (message.content === prefix + "1d100") {
 		message.reply("tu as fait un : " + randomInt(100));
 	}
 
@@ -86,5 +89,9 @@ var randomRepYuna = [
 	":)"
 ];
 
-
+var randomHumeurYuna = [
+	"Je suis un fatigué",
+	"ça va super !!!",
+	"bof bof"
+]
 
