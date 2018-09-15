@@ -46,6 +46,7 @@ bot.on('message', message => {
 	if (message.content.toLowerCase() === "ça va yuna ?" || message.content.toLowerCase() === "comment vas tu yuna ?") {
 		message.reply(randomHumeurYuna[randomInt(randomHumeurYuna.length) - 1] + " et toi ?");
 	}
+	
 	//tu fais quoi
 
 	if (message.content.toLowerCase() === "tu fais quoi yuna ?") {
