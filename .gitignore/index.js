@@ -43,17 +43,17 @@ bot.on('message', message => {
 	if (message.content.toLowerCase() === "quel est ton futur ?") {
 		message.reply("je vais épouser Méliodas :hearts::hearts:");
 	}
-	if (message.content.toLowerCase() === "ça va yuna ?" || message.content.toLowerCase() === "comment vas tu Yuna ?") {
-		message.reply(randomHumeurYuna[randomInt(randomHumeurYuna.length) - 1] + "et toi ?");
+	if (message.content.toLowerCase() === "ça va yuna ?" || message.content.toLowerCase() === "comment vas tu yuna ?") {
+		message.reply(randomHumeurYuna[randomInt(randomHumeurYuna.length) - 1] + " et toi ?");
 	}
 	
 	//tu fais quoi
 
-	if (message.content.toLowerCase() === "tu fais quoi yuna ?" || message.content.toLowerCase() === "tu fais quoi Yuna?") {
+	if (message.content.toLowerCase() === "tu fais quoi yuna ?") {
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
 	}
 	if (message.content === "suce ma bite"){
-		message.reply("oh oui !!!");
+		message.reply("oh oui");
 	}
 	// fonction dé
 
