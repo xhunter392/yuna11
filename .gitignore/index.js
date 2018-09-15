@@ -50,13 +50,13 @@ bot.on('message', message => {
 	// 1er dialogue
 	
 	if (message.content === "salut yuna"){
-		message.reply("salut ^^")
-		sleep(5)
+		message.reply("salut ^^");
+		sleep(5);
 		if (message.content === "ça va ?"){
-			message.channel.sendMessage("oui et toi ?")
-			sleep(5)
+			message.channel.sendMessage("oui et toi ?");
+			sleep(5);
 			if (message.content === "super" || message.content === "bof" || message.content === "bien" || message.content === "oui"){
-				message.channel.sendMessage("c'est super alors :smiley:")
+				message.channel.sendMessage("c'est super alors :smiley:");
 			}
 		}
 	}
