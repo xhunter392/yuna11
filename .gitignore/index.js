@@ -48,8 +48,6 @@ bot.on('message', message => {
 	if (message.content.toLowerCase() === "tu fais quoi yuna ?") {
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
 	}
-
-	}
 	
 	// fonction dé
 
