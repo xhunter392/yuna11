@@ -22,7 +22,6 @@ bot.on('message', message => {
 	}
 	if (message.content.toLowerCase() === "salut yuna" || message.content.toLowerCase() === "bonjour yuna") {
 		message.reply("salut à toi. ^^");
-		console.log("commande salut Yuna effectué");
 	}
 	if (message.content.toLowerCase() === "quelle heure est-il ?" || message.content.toLowerCase() === "quelle heure est il ?") {
 		message.reply("il est " + heure);
@@ -48,6 +47,8 @@ bot.on('message', message => {
 	}
 	if (message.content.toLowerCase() === "tu fais quoi yuna ?") {
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
+	}
+
 	}
 	
 	// fonction dé
@@ -82,8 +83,8 @@ var randomRepYuna = [
 	"Je me promène dans une dimension parallèle à la votre (dans l'internet)",
 	"J'admire le visage de Yukki",
 	"Je réfléchis qui sera ma prochaine victime , mmm :thinking: peut-être que se sera toi **ahahahah** ",
-	"Une autre réponse hasardeuse",
-	":)"
+	"Ne me parles même pas !!! Sous être",
+	"Pas grand chose..."
 ];
 
 var randomHumeurYuna = [
@@ -92,15 +93,7 @@ var randomHumeurYuna = [
 	"bof bof"
 ]
 
-function sleep(seconds){
-    var waitUntil = new Date().getTime() + seconds*1000;
-    while(new Date().getTime() < waitUntil) true;
-}
 
-
-function toFormeCanonique(a, b, c){
-	return (a + "(x " + (-b / (2 * a)) + ")" + " + " + (-b * b - (4 * a * c) / 4 * a))
-}
 
 
 
