@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 var prefix = ("!");
 
+
 bot.on('ready', function () {
 	bot.user.setGame("Commandes: !help");
 	console.log("connected");
@@ -49,6 +50,13 @@ bot.on('message', message => {
 		message.reply(randomRepYuna[randomInt(randomRepYuna.length) - 1]);
 	}
 	
+	// fonction mj du jour
+
+	if (message.content.toLowerCase() === prefix + "set mj du jour"){
+        let memberRole = message.member.guild.roles.find("name", "MJ du jour");
+        message.member.addRole(memberRole)
+	}
+
 	// fonction dé
 
 	if (message.content === prefix + "1d6") {
